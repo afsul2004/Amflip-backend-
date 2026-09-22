@@ -1,0 +1,6 @@
+fastapi
+fastapi[standard]
+mysql.connector
+uvicorn[standard]
+psycopg2-binary
+pydantic
