@@ -3,7 +3,7 @@ from fastapi import HTTPException, FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from  pydantic import BaseModel
 
-from test1 import security
+
 
 app = FastAPI()
 app.add_middleware(
