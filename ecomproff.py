@@ -3,8 +3,6 @@ from fastapi import HTTPException, FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from  pydantic import BaseModel
 
-
-
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
@@ -14,13 +12,22 @@ app.add_middleware(
     allow_headers=["*"]
 )
 
-
 class log(BaseModel):
     name: str = ""
     email: str
     password: str
 
-a = mysql.connector.connect( host="localhost", user="root", passwd="", database="ecomproff")
+# a = mysql.connector.connect( host="localhost", user="root", passwd="", database="ecomproff")
+import os
+import mysql.connector
+
+a = mysql.connector.connect(
+    host=os.environ.get("localhost"),
+    user=os.environ.get("root"),
+    password=os.environ.get(""),
+    database=os.environ.get("ecomproff"),
+    port=int(os.environ.get(3306))
+)
 
 
 @app.post("/register")
@@ -37,8 +44,6 @@ def register(l : log):
     cursor.close()
     return ["Registration Successful"]
 
-
-
 @app.post("/login")
 def login(l: log):
     cursor = a.cursor()
@@ -52,8 +57,6 @@ def login(l: log):
             "username": data[1]
         }
     return ["Invalid ID or Password"]
-
-
 
 @app.post("/forgot-password")
 def forgot_password(l : log):
@@ -71,13 +74,3 @@ def forgot_password(l : log):
     return {
         "message": "Password updated successfully"
     }
-
-
-# @app.get("/products")
-# def get_products():
-#     cursor = a.cursor(dictionary=True)
-#     query = """ SELECT id, name, category, image_url, price, old_price, discount, rating, offer FROM products"""
-#     cursor.execute(query)
-#     data = cursor.fetchall()
-#     cursor.close()
-#     return data
