@@ -26,7 +26,7 @@ a = mysql.connector.connect(
     user=os.environ.get("root"),
     password=os.environ.get(""),
     database=os.environ.get("ecomproff"),
-    port=int(os.environ.get(3306))
+    port = int(os.environ.get("DB_PORT", 3306))
 )
 
 
