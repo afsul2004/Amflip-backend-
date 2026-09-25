@@ -17,18 +17,7 @@ class log(BaseModel):
     email: str
     password: str
 
-# a = mysql.connector.connect( host="localhost", user="root", passwd="", database="ecomproff")
-import os
-import mysql.connector
-
-a = mysql.connector.connect(
-    host=os.environ.get("localhost"),
-    user=os.environ.get("root"),
-    password=os.environ.get(""),
-    database=os.environ.get("ecomproff"),
-    port = int(os.environ.get("DB_PORT", 3306))
-)
-
+a = mysql.connector.connect( host="mysql.railway.internal", user="root", password="uvcHyCYTevZuvYQQXRsOukofLxBaShKK", database="ecomproff" , port = 3306)
 
 @app.post("/register")
 def register(l : log):
