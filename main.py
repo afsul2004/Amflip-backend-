@@ -19,6 +19,20 @@ class log(BaseModel):
 
 a = mysql.connector.connect( host="mysql.railway.internal", user="root", password="uvcHyCYTevZuvYQQXRsOukofLxBaShKK", database="ecomproff" , port = 3306)
 
+@app.get("/")
+def home():
+    return {"message": "FastAPI + Railway MySQL connected"}
+
+@app.get("/products")
+def products():
+    db = get_db()
+    cursor = db.cursor(dictionary=True)
+    cursor.execute("SELECT * FROM prdt")
+    data = cursor.fetchall()
+    cursor.close()
+    db.close()
+    return data
+
 @app.post("/register")
 def register(l : log):
     cursor = a.cursor()
