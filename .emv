@@ -1,0 +1,8 @@
+mysql://root:ODyuuiQtfGzfJFdxKodjttpTfeePNlds@thomas.proxy.rlwy.net:28041/railway
+
+
+MYSQLHOST=your-railway-host
+MYSQLPORT=3306
+MYSQLUSER=your-user
+MYSQLPASSWORD=your-password
+MYSQLDATABASE=your-database
