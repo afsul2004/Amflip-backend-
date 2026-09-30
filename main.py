@@ -17,7 +17,7 @@ class log(BaseModel):
     email: str
     password: str
 
-a = mysql.connector.connect( host="mysql.railway.internal", user="root", password="uvcHyCYTevZuvYQQXRsOukofLxBaShKK", database="ecomproff" , port = 3306)
+a = mysql.connector.connect( host="mysql.railway.internal", user="root", password="CXGMbKVUIHJLwKOEfHVYgcIpNHtuXzVO", database="ecomproff" , port = 3306)
 
 @app.get("/")
 def home():
