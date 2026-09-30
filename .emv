@@ -1,7 +1,7 @@
-mysql://root:CXGMbKVUIHJLwKOEfHVYgcIpNHtuXzVO@mysql.railway.internal:3306/railway
+mysql://root:MElFaZzmbRBcXZKvQPYsBOBQYKwgMfrs@sakura.proxy.rlwy.net:37775/railway
 
 MYSQLHOST="mysql.railway.internal"
-MYSQLPORT=3306
+MYSQLPORT=37775
 MYSQLUSER="root"
-MYSQLPASSWORD="uvcHyCYTevZuvYQQXRsOukofLxBaShKK"
-MYSQLDATABASE="ecomproff"
+MYSQLPASSWORD="MElFaZzmbRBcXZKvQPYsBOBQYKwgMfrs"
+MYSQLDATABASE=""
