@@ -1,4 +1,4 @@
-mysql://root:uvcHyCYTevZuvYQQXRsOukofLxBaShKK@mysql.railway.internal:3306/railway
+mysql://root:CXGMbKVUIHJLwKOEfHVYgcIpNHtuXzVO@mysql.railway.internal:3306/railway
 
 MYSQLHOST="mysql.railway.internal"
 MYSQLPORT=3306
