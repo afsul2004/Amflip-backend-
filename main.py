@@ -23,7 +23,7 @@ a = mysql.connector.connect( host="sakura.proxy.rlwy.net", user="root", password
 
 @app.get("/")
 def home():
-    return {"message": "FastAPI + Railway MySQL connected"}
+    return {"message": "FastAPI connected"}
 
 @app.get("/products")
 def products():
