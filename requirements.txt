@@ -4,3 +4,4 @@ mysql-connector-python>=9.5.0
 uvicorn
 psycopg2-binary
 pydantic
+python-multipart
