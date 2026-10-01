@@ -21,20 +21,6 @@ a = mysql.connector.connect( host="sakura.proxy.rlwy.net", user="root", password
 
 # mysql://root:MElFaZzmbRBcXZKvQPYsBOBQYKwgMfrs@sakura.proxy.rlwy.net:37775/railway
 
-@app.get("/")
-def home():
-    return {"message": "FastAPI connected"}
-
-@app.get("/products")
-def products():
-    db = get_db()
-    cursor = db.cursor(dictionary=True)
-    cursor.execute("SELECT * FROM prdt")
-    data = cursor.fetchall()
-    cursor.close()
-    db.close()
-    return data
-
 @app.post("/register")
 def register(l : log):
     cursor = a.cursor()
